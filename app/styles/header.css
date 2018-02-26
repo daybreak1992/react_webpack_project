@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  background: #03A9F4;
+  height: 100px;
+  padding-left: 80px;
+  align-items: center;
+  padding-right: 30px;
+  box-shadow: 2px 2px 3px #cccccc; }
+  .header .logo {
+    display: flex;
+    align-items: center; }
+    .header .logo img {
+      width: 50px;
+      height: 50px; }
+    .header .logo span {
+      color: #ffffff;
+      font-size: 30px;
+      margin-left: 10px; }
+  .header .tabs {
+    margin-left: 100px;
+    align-self: flex-end;
+    color: #ffffff;
+    flex: 1; }
+  .header .login {
+    color: #ffffff; }
+
+/*# sourceMappingURL=header.css.map */

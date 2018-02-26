@@ -1,0 +1,14 @@
+.pc {
+  display: flex;
+  flex-direction: column; }
+  .pc .container {
+    display: flex;
+    flex-direction: row; }
+  .pc .content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; }
+  .pc .section-container {
+    width: 300px; }
+
+/*# sourceMappingURL=index_pc.css.map */

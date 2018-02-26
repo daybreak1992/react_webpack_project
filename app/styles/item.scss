@@ -1,0 +1,25 @@
+@import "mixin";
+
+.item {
+  display: flex;
+  height: $px * 200;
+  margin: $px * 15;
+  box-shadow: $px * 3 $px * 2 $px * 5 #888;
+  border-radius: $px * 5;
+  padding: $px * 15;
+  align-items: center;
+
+  .title {
+    font-size: $px * 35;
+    color: #666;
+    flex: 1;
+  }
+
+  img {
+    width: $px * 150;
+    height: $px  * 150;
+    background-size: contain;
+    background-image: url("../images/default_square.png");
+    background-repeat: no-repeat;
+  }
+}

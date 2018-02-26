@@ -1,0 +1,57 @@
+.gone {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+.slideInLeft {
+  animation-name: slideInLeft; }
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+.slideOutLeft {
+  animation-name: slideOutLeft; }
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0); } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    visibility: hidden;
+    opacity: 0; } }
+.fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    visibility: visible;
+    opacity: 1; } }
+.fadeIn {
+  animation-name: fadeIn; }
+
+#detail {
+  height: 17.78667rem;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden; }
+  #detail .body {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden; }
+
+/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,28 @@
+@import "mixin";
+
+#toorbar {
+  display: flex;
+  background: #2196F3;
+  height: $px * 100;
+  box-shadow: $px * 3 $px * 3 $px * 5 #888;
+  z-index: 9;
+
+  .menu {
+    height: $px * 100;
+    width: $px * 100;
+    text-align: center;
+    i {
+      margin-top: $px * 20;
+      font-size: $px * 60;
+      color: #fff;
+      margin-left: $px * 15;
+    }
+  }
+
+  .title {
+    line-height: $px * 100;
+    font-size: $px * $headerFont;
+    color: #fff;
+    margin-left: $px * 50;
+  }
+}

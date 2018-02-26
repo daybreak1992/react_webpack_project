@@ -1,0 +1,19 @@
+.pc {
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .section-container {
+    width: 300px;
+  }
+}

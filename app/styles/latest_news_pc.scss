@@ -1,0 +1,22 @@
+.lastest-news-pc {
+  display: flex;
+  flex-direction: column;
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    button {
+      height: 40px;
+      margin-right: 10px;
+      background: #03A9F4;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  }
+}

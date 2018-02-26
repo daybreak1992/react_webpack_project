@@ -1,0 +1,17 @@
+.lastest-news-pc {
+  display: flex;
+  flex-direction: column; }
+  .lastest-news-pc .buttons {
+    display: flex;
+    align-items: center;
+    padding: 10px; }
+    .lastest-news-pc .buttons button {
+      height: 40px;
+      margin-right: 10px;
+      background: #03A9F4;
+      color: #ffffff; }
+    .lastest-news-pc .buttons p {
+      font-size: 18px;
+      margin-right: 10px; }
+
+/*# sourceMappingURL=latest_news_pc.css.map */

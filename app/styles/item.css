@@ -1,0 +1,66 @@
+.gone {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+.slideInLeft {
+  animation-name: slideInLeft; }
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+.slideOutLeft {
+  animation-name: slideOutLeft; }
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0); } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    visibility: hidden;
+    opacity: 0; } }
+.fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    visibility: visible;
+    opacity: 1; } }
+.fadeIn {
+  animation-name: fadeIn; }
+
+.item {
+  display: flex;
+  height: 2.66667rem;
+  margin: 0.2rem;
+  box-shadow: 0.04rem 0.02667rem 0.06667rem #888;
+  border-radius: 0.06667rem;
+  padding: 0.2rem;
+  align-items: center; }
+  .item .title {
+    font-size: 0.46667rem;
+    color: #666;
+    flex: 1; }
+  .item img {
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-image: url("../images/default_square.png");
+    background-repeat: no-repeat; }
+
+/*# sourceMappingURL=item.css.map */

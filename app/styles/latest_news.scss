@@ -1,0 +1,26 @@
+@import "mixin";
+
+#latest_news {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: $px * 1334;
+
+  .content {
+    height: $px * 1234;
+    overflow-x: hidden;
+  }
+
+  .banner_item {
+    height: $px * 500;
+    position: relative;
+    background: #90CAF9;
+
+    h2 {
+      color: #fff;
+      position: absolute;
+      padding: 0 $px * 15;
+      bottom: 0;
+    }
+  }
+}

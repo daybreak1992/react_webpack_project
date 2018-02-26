@@ -1,0 +1,324 @@
+.section {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #03A9F4;
+  box-shadow: 1px 2px 3px #cccccc;
+
+  button {
+    background: #ffffff;
+    min-width: 60px;
+    height: 35px;
+    margin: 5px;
+    border: 1px solid #cccccc;
+    color: #666666;
+  }
+
+  .scale-big .scale-small .skew-l .skew-r .rotate-90 .grow-rotate-l .translate-l .translate-b .border {
+    transition: all .4s;
+  }
+
+  .scale-big:hover {
+    transform: scale(1.2);
+  }
+
+  .scale-small:hover {
+    transform: scale(.9);
+  }
+
+  .skew-l:hover {
+    transform: skew(-15deg);
+  }
+
+  .skew-r:hover {
+    transform: skew(15deg);
+  }
+
+  .rotate-90:hover {
+    transform: rotate(90deg);
+  }
+
+  .grow-rotate-l:hover {
+    transform: scale(1.1) rotate(4deg);
+  }
+
+  .translate-l:hover {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  .translate-b:hover {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  .border:hover {
+    box-shadow: 0 0 0 4px #ffff00, 0 0 1px transparent;
+  }
+
+  .ech-fade, .ech-fade-t, .ech-fade-b, .ech-fade-l, .ech-fade-r, .ech-fade-c-in, .ech-fade-m-in, .ech-fade-m-out, .ech-fade-c-out, .ech-bounce-t, .ech-bounce-b, .ech-bounce-r, .ech-bounce-l {
+    position: relative;
+    transition: all .3s;
+    z-index: 1;
+  }
+
+  .ech-fade:before, .ech-fade-t:before, .ech-fade-b:before, .ech-fade-l:before, .ech-fade-r:before, .ech-fade-c-in:before, .ech-fade-m-in:before, .ech-fade-m-out:before, .ech-fade-c-in:after, .ech-fade-m-in:after, .ech-fade-c-out:before {
+    position: absolute;
+    transition: all .3s;
+    content: "";
+    display: block;
+    background: #09f;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ech-bounce-t:before, .ech-bounce-b:before, .ech-bounce-r:before, .ech-bounce-l:before {
+    transition: all .3s;
+    transition-timing-function: cubic-bezier(0.52, 1.7, 0.5, 0.4);
+    position: absolute;
+    content: "";
+    display: block;
+    background: #09f;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ech-fade:before {
+    top: 0;
+    left: 0;
+    transform: scaleX(1);
+    opacity: 0;
+  }
+
+  .ech-fade:hover:before {
+    opacity: 1;
+  }
+
+  .ech-fade-l:before, .ech-bounce-l:before {
+    top: 0;
+    right: 0;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+  }
+
+  .ech-fade-r:before, .ech-bounce-r:before {
+    top: 0;
+    left: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+
+  .ech-fade-t:before, .ech-bounce-t:before {
+    bottom: 0;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+  }
+
+  .ech-fade-b:before, .ech-bounce-b:before {
+    top: 0;
+    left: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+  }
+
+  .ech-fade-m-out:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: scaleY(0);
+  }
+
+  .ech-fade-c-out:before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: scaleX(0);
+  }
+
+  .ech-fade-c-out:hover:before {
+    transform: scaleX(1);
+  }
+
+  .ech-fade-c-in:before {
+    top: 0;
+    left: 0;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+  }
+
+  .ech-fade-c-in:after {
+    top: 0;
+    right: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+  }
+
+  .ech-fade-m-in:before {
+    top: 0;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scaleY(0);
+  }
+
+  .ech-fade-m-in:after {
+    bottom: 0;
+    left: 0;
+    transform-origin: 50% 100%;
+    transform: scaleY(0);
+  }
+
+  .ech-fade:hover, .ech-fade-t:hover, .ech-fade-b:hover, .ech-fade-l:hover, .ech-fade-r:hover, .ech-fade-c-in:hover, .ech-fade-m-in:hover, .ech-fade-m-out:hover, .ech-fade-c-out:hover, .ech-bounce-t:hover, .ech-bounce-b:hover, .ech-bounce-r:hover, .ech-bounce-l:hover {
+    color: #fff;
+  }
+
+  .ech-fade-m-in:hover:before, .ech-fade-m-in:hover:after {
+    transform: scaleY(.51);
+  }
+
+  .ech-fade-t:hover:before, .ech-fade-b:hover:before, .ech-fade-m-out:hover:before, .ech-bounce-b:hover:before, .ech-bounce-t:hover:before {
+    transform: scaleY(1);
+  }
+
+  .ech-fade-c-in:hover:before, .ech-fade-c-in:hover:after {
+    transform: scaleX(.51);
+  }
+
+  .ech-fade-l:hover:before, .ech-fade-r:hover:before, .ech-fade-c-out:hover:before, .ech-bounce-l:hover:before, .ech-bounce-r:hover:before {
+    transform: scaleX(1);
+  }
+
+  .flash:hover {
+    animation: flash .5s ease;
+  }
+
+  @keyframes flash {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+
+  .shake-time:hover {
+    animation: shake-time 1s ease;
+  }
+
+  @keyframes shake-time {
+    0% {
+      transform: scale(1);
+    }
+    10%, 20% {
+      transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+      transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0);
+    }
+  }
+
+  .wobble-t {
+    transform-origin: 0 100%;
+  }
+
+  .wobble-b {
+    transform-origin: 100% 0;
+  }
+
+  .wobble-c:hover, .wobble-t:hover, .wobble-b:hover {
+    animation: wobble-x 1s ease-in-out;
+  }
+
+  @keyframes wobble-x {
+    16.65% {
+      -webkit-transform: skew(-12deg);
+      transform: skew(-12deg);
+    }
+    33.3% {
+      -webkit-transform: skew(10deg);
+      transform: skew(10deg);
+    }
+    49.95% {
+      -webkit-transform: skew(-6deg);
+      transform: skew(-6deg);
+    }
+    66.6% {
+      -webkit-transform: skew(4deg);
+      transform: skew(4deg);
+    }
+    83.25% {
+      -webkit-transform: skew(-2deg);
+      transform: skew(-2deg);
+    }
+    100% {
+      -webkit-transform: skew(0);
+      transform: skew(0);
+    }
+  }
+
+  .swing:hover {
+    animation: swing-anim .5s ease alternate;
+  }
+
+  @keyframes swing-anim {
+    20% {
+      transform: rotate(15deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  .shake:hover {
+    animation: shake .5s ease;
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(10px);
+    }
+  }
+
+  .bounce:hover {
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+}

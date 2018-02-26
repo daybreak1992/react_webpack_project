@@ -1,0 +1,228 @@
+$huBlue: #00a2ea;
+$huWhite: #f9f9f9;
+$fontWhite: #76787e;
+$headerFont: 40;
+$baseFontSize: 75;
+$px: 1rem / $baseFontSize;
+
+@mixin px2rem($name, $px) {
+  #{$name}: ($px / $baseFontSize) * 1rem
+}
+
+@mixin f_r {
+  float: right;
+}
+
+@mixin f_l {
+  float: left;
+}
+
+@mixin clearFloat {
+  overflow: hidden;
+}
+
+@mixin mx_fc($size, $color) {
+  @include px2rem('font-size', $size);
+  color: $color
+}
+
+@mixin mx_wh($width, $height) {
+  width: $width;
+  height: $height
+}
+
+@mixin mx_wh_r($width, $height) {
+  @include px2rem('width', $width);
+  @include px2rem('height', $height)
+}
+
+@mixin mx_whlh($width, $height, $line-height) {
+  @include px2rem('width', $width);
+  @include px2rem('height', $height);
+  @include px2rem('line-height', $line-height)
+}
+
+@mixin mx_hlh($height, $line-height) {
+  @include px2rem('height', $height);
+  @include px2rem('line-height', $line-height)
+}
+
+@mixin mx_postl($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left
+}
+
+@mixin mx_postl_r($top, $left) {
+  position: absolute;
+  @include px2rem('top', $top);
+  @include px2rem('left', $left)
+}
+
+@mixin mx_postr($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right
+}
+
+@mixin mx_posbl($bottom, $left) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left
+}
+
+@mixin mx_posbl_r($bottom, $left) {
+  position: absolute;
+  @include px2rem('bottom', $bottom);
+  @include px2rem('left', $left)
+}
+
+@mixin mx_posbr($bottom, $right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right
+}
+
+@mixin mx_poftl($top, $left) {
+  position: fixed;
+  top: $top;
+  left: $left
+}
+
+@mixin mx_poftr($top, $right) {
+  position: fixed;
+  top: $top;
+  right: $right
+}
+
+@mixin mx_pofbl($bottom, $left) {
+  position: fixed;
+  bottom: $bottom;
+  left: $left
+}
+
+@mixin mx_pofbr($bottom, $right) {
+  position: fixed;
+  bottom: $bottom;
+  right: $right
+}
+
+@mixin mx_poftb($top, $bottom) {
+  position: fixed;
+  bottom: $bottom;
+  top: $top
+}
+
+@mixin mx_flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex
+}
+
+@mixin mx_flex_item($num) {
+  -webkit-box-flex: $num;
+  -moz-box-flex: $num;
+  flex: $num;
+  box-flex: $num;
+  min-width: 0
+}
+
+@mixin mx_bdrs($radius) {
+  border-radius: $radius
+}
+
+@mixin mx_bdrs_r($radius) {
+  @include px2rem('border-radius', $radius)
+}
+
+@mixin mx_bd($num, $color) {
+  border: $num solid $color
+}
+
+@mixin mx_more_ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+@mixin mx_single_ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.gone {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+

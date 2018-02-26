@@ -1,0 +1,19 @@
+@import "mixin";
+
+.drawer {
+  width: 100%;
+  height: $px * 1334;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: flex;
+  position: fixed;
+
+  .drawer-content {
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background: #fff;
+    padding: $px * 15;
+  }
+}
